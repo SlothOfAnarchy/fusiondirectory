@@ -69,8 +69,7 @@ class objects
       $attrs = array_unique($attrs);
       if (count($attrs) == 1) {
         $attrs = $attrs[0];
-      }
-      if (count($attrs) == 0) {
+      } elseif (count($attrs) == 0) {
         $attrs = array('dn' => 'raw');
       }
     } elseif ($checkAcl) {
