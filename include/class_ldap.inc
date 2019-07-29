@@ -906,7 +906,7 @@ class LDAP
    */
   function success()
   {
-    return preg_match('/Success/i', $this->error);
+    return (trim($this->error) === 'Success');
   }
 
   /*!
